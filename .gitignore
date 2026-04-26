@@ -1,0 +1,58 @@
+# Experiment tracking
+wandb/
+
+# Data files (new files should not be committed accidentally)
+# Main splits (processed_{train,valid,test,all}.csv and Result_final*.csv) are tracked explicitly
+data/*
+!data/processed_train.csv
+!data/processed_valid.csv
+!data/processed_test.csv
+!data/processed_all.csv
+!data/Result_final.csv
+!data/Result_final_PAM.csv
+data_2022/
+inputs/
+
+# Generated outputs
+results/
+eval_grid/
+
+# Model checkpoints (except final model, tracked explicitly)
+models/*.pth
+models/*.pkl
+!models/deepprime7.pth
+!models/deepprime7_scaler.pth
+
+# Logs
+*.log
+
+# Hyperparameter sweeps
+*sweep*
+
+# Notebooks (exploratory, not for reproducibility)
+*.ipynb
+
+# Data processing scripts (intermediate)
+process_pe7_rawdata.py
+
+# Publication / figure materials
+paperwork/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Figure generation scripts
+eval_grid_plot.py
+
+# Training / evaluation scripts (not part of the released inference code)
+train_a549.py
+test_a549.py
+
+# ClinVar-specific inference script (not needed for core reproducibility)
+predict_clinvar.py
+
+# eval/clinvar: generated outputs and pre-computed feature files (large / auto-generated)
+eval/clinvar/deepprime_features/
+eval/clinvar/scenario_results/
