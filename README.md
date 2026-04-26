@@ -159,16 +159,16 @@ python predict.py \
 
 ## Evaluation Scripts (`eval/`)
 
-Scripts in `eval/` compare DeepPrime7 against baseline models and run ClinVar scenario analyses. They require the original **DeepPrime** repository as a sibling directory of PE7:
+Scripts in `eval/` compare DeepPrime7 against baseline models and run ClinVar scenario analyses. They require the original **DeepPrime** repository as a sibling directory of DeepPrime7:
 
 ```
 parent_dir/
-├── PE7/           # this repository
-├── DeepPrime/     # https://github.com/Goosang-Yu/DeepPrime
+├── DeepPrime7/    # this repository
+├── DeepPrime/     # https://github.com/yumin-c/DeepPrime
 └── PRIDICT2/      # https://github.com/uzh-rpg/pridict2  (for run_pridict2_test_preds.py)
 ```
 
-Run scripts from the PE7 repo root:
+Run scripts from the DeepPrime7 repo root:
 
 ```bash
 python eval/run_deepprime_original.py
